@@ -28,7 +28,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   height: 30,
                 ),
                 Expanded(
-                  flex: 1,
+                  //flex: 1,
                   // flex: (MediaQuery.of(context).size.height * (1 / 3)).toInt(),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -36,18 +36,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       Container(
                         //  color: Colors.red,
                         alignment: Alignment.bottomRight,
-                        child: Text(
-                          provider.input,
-                          style: const TextStyle(fontSize: 50),
-                        ),
+                        child: Text(provider.input,
+                            style: const TextStyle(fontSize: 50),
+                            overflow: TextOverflow.ellipsis),
                       ),
                       Container(
                         //  color: Colors.green,
                         alignment: Alignment.bottomRight,
-                        child: Text(
-                          provider.output.toString(),
-                          style: const TextStyle(fontSize: 40),
-                        ),
+                        child: Text(provider.output.toString(),
+                            style: const TextStyle(fontSize: 40),
+                            overflow: TextOverflow.ellipsis),
                       ),
                     ],
                   ),
